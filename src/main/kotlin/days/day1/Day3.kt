@@ -19,6 +19,32 @@ class Day3:Day() {
     }
 
     override fun partTwo(): Any {
-        TODO("Not yet implemented")
+        val input = readInput()
+        var result:Long = 0
+
+
+        result+=checkSlope(1,1,input)
+        result*=checkSlope(3,1,input)
+        result*=checkSlope(5,1,input)
+        result*=checkSlope(7,1,input)
+        result*=checkSlope(1,2,input)
+
+        return result
+    }
+
+    private fun checkSlope(xMod: Int, yMod: Int, input: List<String>): Int {
+        var i = 0
+        var x = 0
+        var result = 0
+        while (i < input.size) {
+            if (input[i][x] == '#') {
+                result++
+            }
+
+            x += xMod
+            x %= input[i].length
+            i += yMod
+        }
+        return result
     }
 }
