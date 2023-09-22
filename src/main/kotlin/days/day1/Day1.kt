@@ -16,6 +16,16 @@ class Day1: Day() {
     }
 
     override fun partTwo(): Any {
-        TODO()
+        val lines :List<Int> = readInput().map (Integer::parseInt)
+        for (i in lines) {
+            for (j in lines) {
+                for (k in lines) {
+                    if (i + j + k== 2020) {
+                        return i*j*k
+                    }
+                }
+            }
+        }
+        return -1
     }
 }
