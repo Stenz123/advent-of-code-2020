@@ -1,7 +1,4 @@
-import days.day1.Day1
-import days.day1.Day2
-import days.day1.Day3
-import days.day1.Day4
+import days.day1.*
 import kotlin.test.Test
 
 class Solve {
@@ -25,4 +22,9 @@ class Solve {
     fun Day4p1() = Day4().printPartOne()
     @Test
     fun Day4p2() = Day4().printPartTwo()
+
+    @Test
+    fun Day5p1() = Day5().printPartOne()
+    @Test
+    fun Day5p2() = Day5().printPartTwo()
 }
