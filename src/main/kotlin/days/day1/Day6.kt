@@ -1,6 +1,7 @@
 package days.day1
 
 import days.Day
+import kotlin.system.exitProcess
 
 class Day6:Day() {
     override fun partOne(): Any {
@@ -22,6 +23,32 @@ class Day6:Day() {
     }
 
     override fun partTwo(): Any {
-        TODO("Not yet implemented")
+        val input = readInput()
+
+        val groups = mutableListOf<List<String>>()
+
+        var groupBuilder = mutableListOf<String>()
+        for (line in input) {
+            if (line.isBlank()) {
+                groups.add(groupBuilder)
+                groupBuilder = mutableListOf()
+            } else {
+                groupBuilder.add(line)
+            }
+        }
+        groups.add(groupBuilder)
+        var result = 0
+        for (group in groups) {
+            for (c in group.joinToString(separator = "").toSet()) {
+                result++
+                group@for (entry in group) {
+                    if (!entry.contains(c)) {
+                        result--
+                        break@group
+                    }
+                }
+            }
+        }
+        return result
     }
 }
