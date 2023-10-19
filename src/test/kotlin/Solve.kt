@@ -32,4 +32,18 @@ class Solve {
     fun Day6p1() = Day6().printPartOne()
     @Test
     fun Day6p2() = Day6().printPartTwo()
+
+    @Test
+    fun Day7p1() = Day7().printPartOne()
+    @Test
+    fun Day7p2() = Day7().printPartTwo()
+    @Test
+    fun Day8p1() = Day8().printPartOne()
+    @Test
+    fun Day8p2() = Day8().printPartTwo()
+
+    @Test
+    fun Day9p1() = Day9().printPartOne()
+    @Test
+    fun Day9p2() = Day9().printPartTwo()
 }
