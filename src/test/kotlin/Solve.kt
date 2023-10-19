@@ -1,4 +1,5 @@
 import days.day1.*
+import days.day17.Day17
 import days.day2.Day2
 import days.day3.Day3
 import days.day4.Day4
@@ -54,4 +55,9 @@ class Solve {
     fun Day9p1() = Day9().printPartOne()
     @Test
     fun Day9p2() = Day9().printPartTwo()
+
+    @Test
+    fun Day17p1() = Day17().printPartOne()
+    @Test
+    fun Day17p2() = Day17().printPartTwo()
 }
