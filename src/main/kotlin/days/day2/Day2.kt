@@ -1,4 +1,4 @@
-package days.day1
+package days.day2
 
 import days.Day
 

@@ -1,7 +1,6 @@
-package days.day1
+package days.day6
 
 import days.Day
-import kotlin.system.exitProcess
 
 class Day6:Day() {
     override fun partOne(): Any {
